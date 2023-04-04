@@ -3,14 +3,14 @@ describe('isWeekDay', function(){
     function(){
         var dayOfTheWeek = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
     
-       assert.typeOf(dayOfTheWeek, 'array');
-       assert.deepEqual('Monday'.startsWith('M'), true);
-        assert.deepEqual('Saturday'.startsWith('M'), false)
-       assert.deepEqual(isWeekDay('Monday'), true);
-       assert.deepEqual(isWeekDay('Saturday'), false, "This is a Weekend");
-
-      
+            assert.typeOf(dayOfTheWeek, 'array');
+            assert.equal('Monday'.startsWith('M'), true);
+            assert.equal('Saturday'.startsWith('M'), false)
+            assert.equal(isWeekDay('Monday'), true);
+            assert.equal(isWeekDay('Saturday'), false, "This is a Weekend");
+            
     }
     )
+    
 }
     )
