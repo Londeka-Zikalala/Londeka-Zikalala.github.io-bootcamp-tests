@@ -1,6 +1,8 @@
 
-return monToFri.startsWith("M")||
-monToFri.startsWith("T")||
-monToFri.startsWith("W")||
-monToFri.startsWith("F")
-        ;}
+function isWeekDay(dayOfTheWeek){ 
+    return dayOfTheWeek.startsWith("M")||
+    dayOfTheWeek.startsWith("T")||
+    dayOfTheWeek.startsWith("W")||
+    dayOfTheWeek.startsWith("F")
+};
+         
