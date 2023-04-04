@@ -3,6 +3,7 @@ describe("isFromBellville", function(){
     function(){ 
         assert.equal("CY 123".startsWith("CY"), true);
         assert.equal("CJ 123".startsWith("CY"), false);
+        assert.equal("".startsWith("CA"), false, "value is Null");
     }
     )
 }
