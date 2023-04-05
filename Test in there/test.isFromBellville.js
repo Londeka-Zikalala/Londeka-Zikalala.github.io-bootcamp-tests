@@ -1,12 +1,13 @@
 describe("isFromBellville", function(){
     it("should return registration numbers that start with CY",
     function(){ 
-        assert.equal("CY 123".startsWith("CY"), true);
-        assert.equal("CJ 123".startsWith("CY"), false);
-        assert.equal("".startsWith("CA"), false, "value is Null");
+        assert.equal(isFromBellville('CY 123'), true);
+        assert.equal(isFromBellville('CJ 123'), false);
+        assert.equal(isFromBellville(''), false, "value is Null");
+
+    }
+)
     }
     )
-}
 
 
-)

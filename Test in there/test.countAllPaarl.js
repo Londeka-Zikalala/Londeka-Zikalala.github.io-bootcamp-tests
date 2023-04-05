@@ -1,17 +1,14 @@
 describe('countAllPaarl', function(){
-
-    var registrationN = '';
-    var registrations = registrationN.split(', ');
     
-    for(var i= 0; i<registrations.length;i++){it('should return the number of Paarl registration numbers',
-    function(){ 
-       let count = 0; 
+    it('should return the number of Paarl registration numbers',
+    function(){
+
+        assert.equal(countAllPaarl('CJ 123 208, CY 123 208'), 1);
+        assert.equal(countAllPaarl('CJ 123 208, CJ 206 586WC'), 2);
+        assert.equal(countAllPaarl(''), 0);
        
-    if(assert.equal('CJ 123 208'.startsWith('CJ'), true)){
-        count++
-    }
-   assert.equal(countAllPaarl('CJ 123 208, CY 123 208'), 1)
+
     })
-}
+
 
 })

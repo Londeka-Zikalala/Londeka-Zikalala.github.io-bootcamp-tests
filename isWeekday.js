@@ -1,8 +1,10 @@
 
+var dayOfTheWeek = ['Monday','Tuesday','Thursday','Friday','Saturday','Sunday']
 function isWeekDay(dayOfTheWeek){ 
-    return dayOfTheWeek.startsWith("M")||
-    dayOfTheWeek.startsWith("T")||
-    dayOfTheWeek.startsWith("W")||
-    dayOfTheWeek.startsWith("F")
+    for(var i = 0; i= dayOfTheWeek.length; i++){
+        var days = dayOfTheWeek[i];
+    
+    }
+    return !days.startsWith("S")
 };
          
