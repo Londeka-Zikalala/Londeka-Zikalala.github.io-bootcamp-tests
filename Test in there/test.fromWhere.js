@@ -5,8 +5,17 @@ describe('fromWhere', function(){
     assert.equal(fromWhere('CY 567489'), 'Bellville');
     assert.equal(fromWhere('CA 567489 '), 'Cape Town');
     assert.equal(fromWhere('CK 567489'), 'Some other place!');
-    assert.equal(fromWhere(''), 'Some other place!');
+    
 
 })
+it(
+    'should be case sensitive and return "Some other place!" for empty strings and all other string values that do not match',
+    function(){
+        assert.equal(fromWhere(''), 'Some other place!');
+        assert.equal(fromWhere('5555'), 'Some other place!');
+        assert.equal(fromWhere('ca 567489'), 'Some other place!', 'Valid registration for Cape Town starts with "CA"');
+    }
+
+)
 })
 

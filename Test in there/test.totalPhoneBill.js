@@ -3,7 +3,15 @@ describe('totalPhoneBill', function(){
     function(){
         assert.equal(totalPhoneBill('call, sms, call, sms, sms'),'R7.45' );
         assert.equal(totalPhoneBill('call'), 'R2.75');
-        assert.equal(totalPhoneBill(''),'R0.00');
+        assert.equal(totalPhoneBill('sms'),'R0.65');
 
     })
+    it(
+        'should be case sensitive and return "R0.00" for empty strings and other string values ',
+        function(){
+            assert.equal(totalPhoneBill(''),'R0.00');
+            assert.equal(totalPhoneBill('SmS'),'R0.00');
+            assert.equal(totalPhoneBill('sms, SMS'),'R0.65');
+        }
+    )
 })
