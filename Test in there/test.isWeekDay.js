@@ -1,5 +1,5 @@
 describe('isWeekday', function () {
-    it('should return true for weekdays and other words that do not start with "S" and false for weekends',
+    it('should return true for weekdays and other words that do not start with "S" ',
         function () {
 
             assert.equal(isWeekday('Monday'), true);
@@ -8,11 +8,11 @@ describe('isWeekday', function () {
 })
 
 it(
-    'should not be case sensitive and return "true" for empty strings',
+    'should be case sensitive and return false for empty strings',
     function () {
-        assert.equal(isWeekday('march'), true);
-        assert.equal(isWeekday('tuesDay'), true)
-        assert.equal(isWeekday(''), true);
+        assert.equal(isWeekday('march'), false);
+        assert.equal(isWeekday('tuesDay'), false);
+        assert.equal(isWeekday(''), false);
     }
 )
     
