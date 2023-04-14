@@ -1,9 +1,8 @@
 const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursaday', 'Friday', 'Saturday','Sunday'];
-
-function isWeekday(daysOfTheWeek){
-    if(daysOfTheWeek.startsWith('M')||daysOfTheWeek.startsWith('T')||daysOfTheWeek.startsWith('W')||daysOfTheWeek.startsWith('F') ){
+function isWeekday(weekdays){
+    if(weekdays.startsWith('M')||weekdays.startsWith('T')||weekdays.startsWith('W')||weekdays.startsWith('F') ){
        return true}
-        else if (daysOfTheWeek.startsWith('S')||daysOfTheWeek.startsWith(''))
+        else if (weekdays.startsWith('S')||weekdays.startsWith(''))
         {
             return false
         }
