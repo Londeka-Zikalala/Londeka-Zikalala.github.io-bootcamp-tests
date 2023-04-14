@@ -10,10 +10,17 @@ describe('countAllFromTown', function(){
         assert.equal(Bellville, 1)
     }
     )
-    it('should return 0 for empty strings and lowcase letters passed as registration numbers',
+    it('should be case sensitive and return 0 for incorrect case format',
+    function(){
+        assert.equal(countAllFromTown('cy 123 456','CY'), 0, 'Bellville starts with "CY"')
+    
+    }
+
+    )
+    it('should return 0 for empty strings',
     function(){
         assert.equal(countAllFromTown('','CY'), 0)
-        assert.equal(countAllFromTown('cy 123 546', 'CY'), 0)
+    
     }
 
     )

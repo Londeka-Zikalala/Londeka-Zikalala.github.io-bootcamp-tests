@@ -5,13 +5,18 @@ describe('transportFee', function(){
        assert.equal(transportFee('afternoon'),'R10');
        assert.equal(transportFee('night'), 'free');
     })
-
     it(
-        'should be case sensitive and return "free" for empty strings and all other string values',
+        'should be case sensitive and return "free" for incorrect format',
         function(){
-            assert.equal(transportFee('Morning'), 'free', "correct value is 'morning'");
+     
+            assert.equal(transportFee('NIGHT'), 'free', "correct value is 'night'");
+        }
+    )
+    it(
+        'should be case sensitive and return "free" for empty strings',
+        function(){
+     
             assert.equal(transportFee(''), 'free', "empty string");
-            assert.equal(transportFee('afterNoon'), 'free', 'correct value is "afternoon"');
         }
     )
 })

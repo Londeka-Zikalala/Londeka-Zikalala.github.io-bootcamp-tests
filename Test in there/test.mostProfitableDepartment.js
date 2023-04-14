@@ -41,22 +41,27 @@ describe('mostProfitableStoreDepartment', function(){
             {department : 'steelwork', sales : 1500, day : 'Wednesday'},
             {department : 'carpentry', sales : 8009, day : 'Wednesday'},
         ];
-
-        var someSalesData2 = [
-        {department : 'electronics', sales : 12006, day : 'Friday'},
-        {department : 'electronics', sales : 16109, day : 'Saturday'},
-        {department : 'steelwork', sales : 7500, day : 'Tuesday'},
-        {department : 'outdoor', sales : 2505, day : 'Tuesday'},
-        {department : 'carpentry', sales : 1540, day : 'Tuesday'},
-        {department : 'steelwork', sales : 1500, day : 'Wednesday'},
-        {department : 'carpentry', sales : 8009, day : 'Wednesday'},
-    ];
-
-    assert.deepEqual(mostProfitableDepartment(salesData), 'outdoor');
-    assert.deepEqual(mostProfitableDepartment(salesData2), 'electronics');
-    assert.deepEqual(mostProfitableDepartment(someSalesData2), 'electronics');
+        assert.deepEqual(mostProfitableDepartment(salesData), 'outdoor');
+        assert.deepEqual(mostProfitableDepartment(salesData2), 'electronics');
     
     });
+
+    it('should return "carpentry"',
+    function(){
+        var someSalesData2 = [
+            {department : 'electronics', sales : 12000, day : 'Friday'},
+            {department : 'electronics', sales : 12000, day : 'Saturday'},
+            {department : 'outdoor', sales : 12000, day : 'Tuesday'},
+            {department : 'outdoor', sales : 12000, day : 'Tuesday'},
+            {department : 'carpentry', sales : 12000, day : 'Tuesday'},
+            {department : 'carpentry', sales : 12000, day : 'Wednesday'},
+            {department : 'carpentry', sales : 12000, day : 'Wednesday'}
+
+        ];
+    
+        
+        assert.equal(mostProfitableDepartment(someSalesData2), 'carpentry');
+    })
 
     it('should return an empty string if the data is empty', 
     function(){

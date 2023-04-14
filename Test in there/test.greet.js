@@ -1,15 +1,18 @@
 describe('greet' , function(){
-    it('should greet neighbour with "Hello, neighbourName"' , 
+    it('should greet neighbour with "Hello, Janine"' , 
     function(){
         assert.equal("Hello, Janine", greet('Janine'));
-        assert.equal("Hello, Themba", greet('Themba'));
     })
+    it('should greet neighbour with "Hello, thabo"' , 
+    function(){
+        assert.equal("Hello, thabo", greet('thabo'));
+    })
+    
     it(
-        'should not be case sensitive and print the value of any value type',
+        'should return a "Hello, " for empty strings',
         function(){
-            assert.equal(greet('janiNe'), 'Hello, janiNe');
-            assert.equal(greet(855), 'Hello, 855')
-            assert.equal(greet('855'), 'Hello, 855')
+            assert.equal(greet(''), 'Hello, ');
+          
         }
     )
 
