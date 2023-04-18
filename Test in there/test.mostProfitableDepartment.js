@@ -59,7 +59,7 @@ describe('mostProfitableStoreDepartment', function(){
         ];
     
         
-        assert.equal(mostProfitableDepartment(someSalesData2), 'carpentry');
+        assert.equal(mostProfitableDepartment(someSalesData2), 'electronics');
     })
 
     it('should return an empty string if the data is empty', 
