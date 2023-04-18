@@ -46,16 +46,15 @@ describe('mostProfitableStoreDepartment', function(){
     
     });
 
-    it('should return "carpentry"',
+    it('should return the first department if all the departments have the same sale values',
     function(){
         var someSalesData2 = [
             {department : 'electronics', sales : 12000, day : 'Friday'},
             {department : 'electronics', sales : 12000, day : 'Saturday'},
             {department : 'outdoor', sales : 12000, day : 'Tuesday'},
-            {department : 'outdoor', sales : 12000, day : 'Tuesday'},
+            {department : 'outdoor', sales : 12000, day : 'Monday'},
             {department : 'carpentry', sales : 12000, day : 'Tuesday'},
             {department : 'carpentry', sales : 12000, day : 'Wednesday'},
-            {department : 'carpentry', sales : 12000, day : 'Wednesday'}
 
         ];
     
