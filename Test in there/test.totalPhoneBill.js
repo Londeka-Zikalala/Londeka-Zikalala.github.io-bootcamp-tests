@@ -7,7 +7,7 @@ describe('totalPhoneBill', function(){
 
     })
     it(
-        'should be case sensitiveand return R0.00 for services not listed in the correct format',
+        'should be case sensitive and return R0.00 for services not listed in the correct format',
         function(){
             assert.equal(totalPhoneBill('SmS'),'R0.00');
             assert.equal(totalPhoneBill('sms, SMS'),'R0.65');
